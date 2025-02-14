@@ -16,18 +16,29 @@
         .slides img {
             width: 100%;
         }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
     </style>
     <script>
         let index = 0;
-        function showSlides() {
+        function showSlides(n) {
             const slides = document.querySelector('.slides');
-            index++;
-            if (index >= slides.children.length) {
-                index = 0;
-            }
+            const totalSlides = slides.children.length;
+            index = (n + totalSlides) % totalSlides;
             slides.style.transform = `translateX(${-index * 100}%)`;
         }
-        setInterval(showSlides, 3000);
+        function nextSlide() { showSlides(index + 1); }
+        function prevSlide() { showSlides(index - 1); }
+        setInterval(nextSlide, 3000);
     </script>
 </head>
 <body>
@@ -46,11 +57,14 @@
         <option>Giving back</option>
     </select>
     <div class="slider">
+        <button class="prev" onclick="prevSlide()">❮</button>
         <div class="slides">
             <img src="https://nitw.ac.in/media/files/placement-slideshow-1.jpg" alt="placement 1">
             <img src="https://nitw.ac.in/media/files/placement-slideshow-2.jpg" alt="placement 2">
             <img src="https://nitw.ac.in/media/files/placement-slideshow-3.jpg" alt="placement 3">
+            <img src="https://nitw.ac.in/api/static/files/welcome_to_NIT_WARANGAL_2023-4-15-16-35-49.jpg" alt="welcome to nitw">
         </div>
+        <button class="next" onclick="nextSlide()">❯</button>
     </div>
     <marquee bgcolor="yellow">27-12-2024: Stoppage of pension in respect of pensioners / family pensioners who have not submitted the Annual Life Certificate</marquee>
     <div style="width:600px; height:1200px">
