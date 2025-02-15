@@ -1,96 +1,33 @@
-<html>
-<head>
-    <title>NITW</title>
-    <style>
-        .slider {
-            position: relative;
-            width: 100%;
-            max-width: 1350px;
-            margin: auto;
-            overflow: hidden;
-        }
-        .slides {
-            display: flex;
-            transition: transform 1s ease-in-out;
-        }
-        .slides img {
-            width: 100%;
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            padding: 10px;
-            cursor: pointer;
-        }
-        .prev { left: 10px; }
-        .next { right: 10px; }
-    </style>
-    <script>
-        let index = 0;
-        function showSlides(n) {
-            const slides = document.querySelector('.slides');
-            const totalSlides = slides.children.length;
-            index = (n + totalSlides) % totalSlides;
-            slides.style.transform = `translateX(${-index * 100}%)`;
-        }
-        function nextSlide() { showSlides(index + 1); }
-        function prevSlide() { showSlides(index - 1); }
-        setInterval(nextSlide, 3000);
-    </script>
-</head>
-<body>
-    <marquee bgcolor="blue" height=40px style="color:white"><a href="https://www.nitw.ac.in">Welcome to NITW</a></marquee>
-    <hr/>
-    <center><img src="https://www.nitw.ac.in/images/NITW_logo_telugu3.png" alt="nitw logo"></center>
-    <br/>
-    <label><b>Institute</b></label>
-    <select>
-        <option><a href="https://nitw.ac.in/aboutus">About us</a></option>
-        <option>Vision and mission</option>
-        <option>Key Documents</option>
-        <option>Institute facilities</option>
-        <option>Visiting NITW</option>
-        <option>Institute seminars</option>
-        <option>Giving back</option>
-    </select>
-    <div class="slider">
-        <button class="prev" onclick="prevSlide()">❮</button>
-        <div class="slides">
-            <img src="https://nitw.ac.in/media/files/placement-slideshow-1.jpg" alt="placement 1">
-            <img src="https://nitw.ac.in/media/files/placement-slideshow-2.jpg" alt="placement 2">
-            <img src="https://nitw.ac.in/media/files/placement-slideshow-3.jpg" alt="placement 3">
-            <img src="https://nitw.ac.in/api/static/files/welcome_to_NIT_WARANGAL_2023-4-15-16-35-49.jpg" alt="welcome to nitw">
-        </div>
-        <button class="next" onclick="nextSlide()">❯</button>
+
+  <div class="slide">
+        <img src="https://nitw.ac.in/api/static/files/NITW_transport_v2_2023-5-24-12-3-35.jpg" alt="NITW" style="width:100%">
     </div>
-    <marquee bgcolor="yellow">27-12-2024: Stoppage of pension in respect of pensioners / family pensioners who have not submitted the Annual Life Certificate</marquee>
-    <div style="width:600px; height:1200px">
-        <h4 style="color:blue; font-size:40px">Director's message</h4>
-        <img src="https://nitw.ac.in/api/static/files/Director_image1_2023-5-20-12-32-22.jpg" alt="director" style="width:400px">
-        <pre>I am glad that I have been given an opportunity to serve as the Director of National Institute of Technology (NIT) Warangal...</pre>
-        <h4 style="color:blue; font-size:40px">Professor Bidyadhar Subudhi</h4>
-        <p>Director</p>
-        <pre>dsajkdnaskjdfhasiofhjdsjklfbdsjk sdjkfbnbndskjsnfewsikuihfewuwfhewkfheskfndsdkv dsjkvbwedifewuifhadshjbchjdskbcbdsafhfdsuic dsj vewhjbjkdscnedwjkb kdsbccjdslbfidsibfcbdsjcvmnds cvjdscewsKJFBNBESHJKCCDSJKCV DSJKVB BADSUIVHDSUIKCNDSJKJCVNEwskjKSnkjBJKBKJQWLB DJKQAwbdjkdbj asnjdsbdjfhbdsuidsjkdsvbnbdsjklvbdsjvbdsjhv dsnmv 
-            dsjkvkdsaajifbnedsjkfndsjkvndsjkvbnedsujikikvnaedjikgfherhjkgfher
-            hjkerjkgherkgfergfgberbgfjierhgerbfierfghrefeakhjfbadskjlvbdfjkfhdsajkfhdsakjfedjkgfaedrjkjhdfkjfhgffaedrjkjafhaewjkj
-            
-            
-            fdsdnjnkfdsaifhedsaduifewahjfkbewahjkhfbewajhkfbewahjkfbewgbfbaewhjkfbe
-            whjhgfbewhjkfbewhjfbewhjbfjhesabfewhjhfbaewjhbfhbhbfbhjkaewrbfejkwfbewig4w9rghgwhkfbewrhjfewrbfhjeaghfyiewrbfbewrhjkjkfbferhjgfbreahjfbewrahjfbrehjgfberahjbgeryigfhweaifbhjewbfaewa</pre>
+
+    <div class="slide">
+
+        <img src="https://nitw.ac.in/api/static/files/hor_all_2024-7-12-13-13-57.jpg" style="width:100%">
     </div>
-    <div style="background-color:peach">
-        <img src="https://www.nitw.ac.in/images/nirf.png" alt="nirf ranking">
-        <img src="https://www.nitw.ac.in/images/the.png"/>
-        <h4 style="color:blue; font-size:20px">Vision</h4>
-        <pre>Towards a Global Knowledge Hub, striving continuously in pursuit of excellence...</pre>
+
+    <div class="slide">
+        <img src="https://nitw.ac.in/api/static/files/physics_dept_2023-7-22-10-47-36.jpg" style="width:100%">
     </div>
-    <h4 style="color:blue; font-size:20px">Mission</h4>
-    <pre>Imparting total quality education to develop innovative, entrepreneurial and ethical future professionals...</pre>
-    <h3>Upcoming events</h3>
-    <center><h2>Our placements</h2></center>
-    <center><a href="https://nitw.ac.in/ccpd">Visit the Centre for Career Planning and Development</a></center>
-</body>
+
+  <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNJmO5oHPo6S_-Cix1T5lY-iM6S-aNpI_nAw&s" style="width:100%">
+    </div>
+
+
+
+    <a class="prev-btn" onclick="navigateSlides(-1)">❮</a>
+    <a class="next-btn" onclick="navigateSlides(1)">❯</a>
+</div>
+<br>
+
+<div style="text-align:center">
+    <span class="indicator" onclick="currentSlide(1)"></span>
+    <span class="indicator" onclick="currentSlide(2)"></span>
+    <span class="indicator" onclick="currentSlide(3)"></span>
+</div>
+
+
 </html>
